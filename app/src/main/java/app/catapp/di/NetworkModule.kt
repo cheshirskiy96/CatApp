@@ -1,14 +1,12 @@
 package app.catapp.di
 
-import app.catapp.database.CatObject
-import app.catapp.network.NetworkService
+
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import javax.inject.Inject
 
 @Module
 class NetworkModule {

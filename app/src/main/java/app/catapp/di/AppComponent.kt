@@ -1,16 +1,16 @@
 package app.catapp.di
 
 
+import android.content.Context
 import app.catapp.MainActivity
-import app.catapp.ui.CatMainScreen
+import app.catapp.database.CatObject
+import dagger.BindsInstance
 import dagger.Component
-import dagger.Provides
 
-@Component(modules = [AppModule::class])
-interface AppComponent {
-    @Provides
-    fun inject(activity: CatMainScreen)
 
-    @Provides
+@Component (modules = [NetworkModule::class,AppModule::class])
+interface AppComponent{
     fun inject(activity: MainActivity)
+
+
 }
